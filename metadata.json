@@ -1,0 +1,6 @@
+{
+  "name": "C++ 编程单词闪卡",
+  "description": "交互式 3D 翻转单词卡片，助你掌握 C++ 核心编程词汇。",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": []
+}

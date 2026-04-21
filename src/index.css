@@ -1,0 +1,70 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&display=swap');
+
+@theme {
+  --font-serif: "Crimson Pro", "Georgia", serif;
+  
+  --color-natural-bg: var(--natural-bg);
+  --color-natural-text: var(--natural-text);
+  --color-olive: var(--olive);
+  --color-olive-dark: var(--olive-dark);
+  --color-card-front: var(--card-front);
+  --color-card-back: var(--card-back);
+  --color-card-border: var(--card-border);
+  --color-accent-gold: var(--accent-gold);
+  --color-heart-active: var(--heart-active);
+}
+
+:root {
+  --natural-bg: #f8f7f2;
+  --natural-text: #2d2d2a;
+  --olive: #5a5a40;
+  --olive-dark: #4a4a35;
+  --card-front: #ffffff;
+  --card-back: #f1ede4;
+  --card-border: #e0dfd5;
+  --accent-gold: #c5a059;
+  --heart-active: #a64d4d;
+  color-scheme: light;
+}
+
+.dark {
+  --natural-bg: #1a1a18;
+  --natural-text: #e0dfd5;
+  --olive: #a1a196;
+  --olive-dark: #f8f7f2;
+  --card-front: #2d2d2a;
+  --card-back: #353531;
+  --card-border: #45453d;
+  --accent-gold: #d4b475;
+  --heart-active: #ff6b6b;
+  color-scheme: dark;
+}
+
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+  }
+  .animate-shake {
+    animation: shake 0.2s ease-in-out 0s 2;
+  }
+}
+
+body {
+  @apply bg-natural-bg text-natural-text antialiased font-serif;
+}
