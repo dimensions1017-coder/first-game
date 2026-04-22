@@ -63,6 +63,29 @@
   .animate-shake {
     animation: shake 0.2s ease-in-out 0s 2;
   }
+
+  @keyframes bounce-short {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+  }
+  .animate-bounce-short {
+    animation: bounce-short 0.5s ease-in-out infinite;
+  }
+
+  /* Custom Scrollbar for Cards */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(90, 90, 64, 0.2);
+    border-radius: 10px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(90, 90, 64, 0.4);
+  }
 }
 
 body {
